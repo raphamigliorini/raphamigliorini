@@ -1,0 +1,11 @@
+com/esg/horta/HortaApplication.class
+com/esg/horta/entity/Canteiro.class
+com/esg/horta/controller/EspecieController.class
+com/esg/horta/repository/RelatorioRepository.class
+com/esg/horta/config/SecurityConfig.class
+com/esg/horta/repository/CanteiroRepository.class
+com/esg/horta/entity/Especie.class
+com/esg/horta/controller/HortaController.class
+com/esg/horta/service/HortaService.class
+com/esg/horta/config/ApiExceptionHandler.class
+com/esg/horta/repository/EspecieRepository.class

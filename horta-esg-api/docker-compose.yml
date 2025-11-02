@@ -1,0 +1,26 @@
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:21-full
+    environment:
+      ORACLE_PASSWORD: oracle123           # senha do SYS/SYSTEM
+      APP_USER: esg_user                   # usuário da aplicação
+      APP_USER_PASSWORD: esg123            # senha da aplicação
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oracle-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@oracle-db:1521/FREEPDB1
+      SPRING_DATASOURCE_USERNAME: esg_user
+      SPRING_DATASOURCE_PASSWORD: esg123
+
+volumes:
+  oracle-data:
+
