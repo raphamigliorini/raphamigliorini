@@ -1,8 +1,12 @@
 package com.esg.horta.controller;
 
+import com.esg.horta.entity.Canteiro;
 import com.esg.horta.entity.Especie;
+import com.esg.horta.repository.CanteiroRepository;
 import com.esg.horta.repository.EspecieRepository;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,6 +43,27 @@ public class EspecieController {
     if (!repo.existsById(id)) return ResponseEntity.notFound().build();
     repo.deleteById(id);
     return ResponseEntity.noContent().build();
+  }
+  @Autowired
+  private EspecieRepository especieRepository; // Assumindo EspecieRepository
+
+  @Autowired
+  private CanteiroRepository canteiroRepository;
+
+  // ... outros repositórios (Colheita, Doacao)
+
+  // 1. POST /api/especies - Criação
+  @PostMapping("/especies")
+  public ResponseEntity<Especie> createEspecie(@RequestBody Especie especie) {
+    Especie savedEspecie = especieRepository.save(especie);
+    return new ResponseEntity<>(savedEspecie, HttpStatus.CREATED); // 201 Created
+  }
+
+  // 2. GET /api/canteiros - Listagem
+  @GetMapping("/canteiros")
+  public ResponseEntity<List<Canteiro>> getAllCanteiros() {
+    List<Canteiro> canteiros = canteiroRepository.findAll();
+    return ResponseEntity.ok(canteiros); // 200 OK
   }
 }
 

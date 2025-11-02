@@ -8,6 +8,16 @@ import jakarta.validation.constraints.NotBlank;
 public class Especie {
 
   @Id
+  @GeneratedValue(
+          strategy = GenerationType.SEQUENCE,
+          generator = "especie_seq_generator" // Nome interno para referência
+  )
+  // 2. Mapeia o gerador para a sequência REAL no Oracle
+  @SequenceGenerator(
+          name = "especie_seq_generator",
+          sequenceName = "SEQ_ESPECIE", // <<--- Nome EXATO da sua sequência no SQL
+          allocationSize = 1 // Recomendado para Oracle
+  )
   @Column(name = "ID")
 
   private Long id;
