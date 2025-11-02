@@ -26,7 +26,7 @@ jpa:
       command: repair
 
 server:
-  port: 3306
+  port: 1512
 management:
   endpoints:
     web:
