@@ -9,10 +9,13 @@ spring:
       driver-class-name: oracle.jdbc.OracleDriver },
     jpa: { hibernate: } }
 jpa:
-  hibernate: { ddl-auto: update }
+  hibernate: { ddl-auto: none }
   show-sql: true
   flyway: { enabled: true, locations: classpath:db/migration, connect-retries: 60, baselineOnMigrate: true,
-                clean-disabled: true, command: repair
+#                clean-disabled: true, command: repair
   }
 server: { port: 1512 }
-management: { endpoints: { web: { exposure: { include: "health,info,metrics" } } } }
+management: { endpoints:
+                { web:
+                    { exposure:
+                        { include: "health,info,metrics" } } } }
