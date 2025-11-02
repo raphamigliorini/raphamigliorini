@@ -5,6 +5,13 @@
     "description": "Coleção de endpoints para a API Horta, gerada a partir do HortaController e EspecieController.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:1512",
+      "type": "string",
+      "description": "URL base da sua API Spring Boot (e.g., http://localhost:8080)"
+    },
   "item": [
     {
       "name": "Health Check",
