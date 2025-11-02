@@ -72,7 +72,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"nomePopular\": \"Manjericão\",\n    \"nomeCientifico\": \"Ocimum basilicum\",\n    \"cicloVidaDias\": 90,\n    \"informacoesAdicionais\": \"Planta aromática para tempero.\"\n}",
+              "raw": "{\n \"nome\": \"Manjericão\",\n}",
               "options": {
                 "raw": {
                   "language": "json"
