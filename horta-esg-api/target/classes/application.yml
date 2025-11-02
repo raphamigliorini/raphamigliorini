@@ -1,34 +1,21 @@
 spring:
-  docker:
-    compose:
-      enabled: false
-  datasource:
-
-    url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
-
-    username: RM560016
-    password: fiap25
-    driver-class-name: oracle.jdbc.OracleDriver
-  jpa:
-    hibernate:
+  { docker:
+      { compose:
+          { enabled: false }
+      }, datasource:
+    { url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL,
+      username: RM560016,
+      password: fiap25,
+      driver-class-name: oracle.jdbc.OracleDriver },
+    jpa: { hibernate: } }
 jpa:
-  hibernate:
-    # Hibernate tentará criar as tabelas se não existirem
-    ddl-auto: update
+  hibernate: { ddl-auto: none }
   show-sql: true
-
-  flyway:
-      enabled: false
-      locations: classpath:db/migration
-      connect-retries: 60
-      baselineOnMigrate: true
-#      clean-disabled: true
-#      command: repair
-
-server:
-  port: 3306
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics
+  flyway: { enabled: true, locations: classpath:db/migration, connect-retries: 60, baselineOnMigrate: true,
+#                clean-disabled: true, command: repair
+  }
+server: { port: 1512 }
+management: { endpoints:
+                { web:
+                    { exposure:
+                        { include: "health,info,metrics" } } } }

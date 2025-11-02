@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="snapshotDbValue" value="6a74d487-1fdb-4319-9266-8a6790e98554__RM560016" />
+    <option name="snapshotDirValue" value="$PROJECT_DIR$/horta-esg-api/src/main/resources/db/migration" />
+    <option name="sourceDbValue" value="6a74d487-1fdb-4319-9266-8a6790e98554__RM560016" />
+    <option name="sourceDiffType" value="DB" />
+    <option name="sourceModelValue" value="horta-esg-api:horta-esg-api" />
+    <option name="targetDbValue" value="6a74d487-1fdb-4319-9266-8a6790e98554__RM560016" />
+  </component>
+</project>

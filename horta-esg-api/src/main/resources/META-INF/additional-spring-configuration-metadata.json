@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "jpa.flyway.locations",
+      "type": "java.lang.String",
+      "description": "Description for jpa.flyway.locations."
+  }
+] }
