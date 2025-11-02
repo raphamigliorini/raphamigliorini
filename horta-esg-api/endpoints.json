@@ -72,7 +72,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n \"nome\": \"Manjericão\",\n}",
+              "raw": "{\"nome\": \"Manjericão\"}",
               "options": {
                 "raw": {
                   "language": "json"
