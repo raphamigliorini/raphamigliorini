@@ -1,8 +1,8 @@
 {
   "info": {
     "_postman_id": "520d3f82-a7d1-443b-8255-b77871b659c2",
-    "name": "Horta API",
-    "description": "Coleção de endpoints para a API Horta, gerada a partir do HortaController e EspecieController.",
+    "name": "Horta API - Somente Espécies",
+    "description": "Endpoints para a API Horta, focados apenas nas operações de CRUD para Espécies.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -11,7 +11,8 @@
       "value": "http://localhost:1512",
       "type": "string",
       "description": "URL base da sua API Spring Boot (e.g., http://localhost:8080)"
-    },
+    }
+  ],
   "item": [
     {
       "name": "Health Check",
@@ -71,7 +72,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"nome\": \"Cebolinha \"/\n}",
+              "raw": "{\n    \"nomePopular\": \"Manjericão\",\n    \"nomeCientifico\": \"Ocimum basilicum\",\n    \"cicloVidaDias\": 90,\n    \"informacoesAdicionais\": \"Planta aromática para tempero.\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -144,13 +145,6 @@
           "response": []
         }
       ]
-    },
-    },
-  "variable": [
-    {
-      "key": "baseUrl",
-      "value": "http://localhost:1512",
-      "type": "string",
-      "description": "URL base da sua API Spring Boot (e.g., http://localhost:8080)"
     }
-  ],
+  ]
+}
