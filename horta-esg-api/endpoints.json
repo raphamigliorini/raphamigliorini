@@ -64,7 +64,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"nomeCientifico\": \"Solanum lycopersicum\",\n    \"nomePopular\": \"Tomate\",\n    \"cicloVidaDias\": 90,\n    \"informacoesAdicionais\": \"Requer sol pleno e solo bem drenado.\"\n    /* Adicione aqui os demais campos da sua entidade Especie */\n}",
+              "raw": "{\n    \"nome\": \"Cebolinha\"/\n}",
               "options": {
                 "raw": {
                   "language": "json"
