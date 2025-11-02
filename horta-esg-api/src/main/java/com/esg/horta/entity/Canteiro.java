@@ -8,7 +8,17 @@ import jakarta.validation.constraints.*;
 public class Canteiro {
 
   @Id
-  @Column(name="ID")
+  @GeneratedValue(
+          strategy = GenerationType.SEQUENCE,
+          generator = "canteiro_seq_generator" // Nome de referência
+  )
+  // 2. Mapeia o gerador para a sequência REAL no banco de dados Oracle
+  @SequenceGenerator(
+          name = "canteiro_seq_generator",
+          sequenceName = "SEQ_CANTEIRO", // <<--- Nome EXATO da sua sequência SQL
+          allocationSize = 1 // Recomendado para evitar saltos de ID
+  )
+  @Column(name = "ID")
   private Long id;
 
   @NotBlank
