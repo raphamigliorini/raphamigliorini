@@ -7,7 +7,7 @@
   },
   "variable": [
     {
-      "key": "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL,",
+      "key": "baseUrl,",
       "value": "http://localhost:1512",
       "type": "string",
       "description": "URL base da sua API Spring Boot (e.g., http://localhost:8080)"
