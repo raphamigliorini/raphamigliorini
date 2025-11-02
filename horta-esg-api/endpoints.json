@@ -7,7 +7,7 @@
   },
   "variable": [
     {
-      "key": "baseUrl,",
+      "key": "baseUrl",
       "value": "http://localhost:1512",
       "type": "string",
       "description": "URL base da sua API Spring Boot (e.g., http://localhost:8080)"
